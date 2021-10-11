@@ -1,0 +1,18 @@
+<ul>
+    {{ range .Data.Pages.ByDate.Reverse }}
+    <li>
+        <div class="title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </div>
+        <div class="subtitle">
+            <time>
+                {{ if eq .Date.Year now.Year }}
+                    {{ .Date.Format "02 January" }}
+                {{ else }}
+                    {{ .Date.Format "January 2006" }}
+                {{ end }}
+            </time>
+        </div>
+    </li>
+    {{ end }}
+</ul>

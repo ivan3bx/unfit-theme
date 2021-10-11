@@ -1,0 +1,12 @@
+<section class="header">
+  <div class="title">
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  </div>
+  <nav class="hidden sm:block">
+    {{ range .Site.Menus.main }}
+    <div class="nav-item">
+      <a href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+    </div>
+    {{ end }}
+  </nav>
+</section>
