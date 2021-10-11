@@ -2,14 +2,14 @@
     {{ if isset .Params "title" }}
     <div class="heading">
         <div class="subtitle">{{ .Params.Subtitle }}</div>
-        <div class="title"><a href="{{ .URL }}">{{.Title}}</a></div>
+        <div class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></div>
     </div>
     {{ end }}
     {{ .Content }}
     <div class="footer">
         <div class="flex-center">
             {{ if isset .Params "title" }}
-            <a class="flex-center" href="{{ .URL }}">
+            <a title="Permalink to '{{ .Title }}'" class="flex-center" href="{{ .Permalink }}">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
