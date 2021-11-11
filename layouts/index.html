@@ -1,9 +1,7 @@
 {{ define "main" }}
 <div class="container">
   {{ range first 10 (where .Site.RegularPages "Type" "=" "posts") }}
-  <article>
     {{ partial "post" .}}
-  </article>
   {{ end }}
 </div>
 {{ end }}

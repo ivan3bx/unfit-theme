@@ -1,9 +1,9 @@
-<section class="post">
+<article class="post">
     {{ if isset .Params "title" }}
-    <div class="heading">
+    <header>
+        <h1 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
         <div class="subtitle">{{ .Params.Subtitle }}</div>
-        <div class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></div>
-    </div>
+    </header>
     {{ end }}
     {{ .Content }}
     <div class="footer">
@@ -27,4 +27,4 @@
             {{ end }}
         </div>
     </div>
-</section>
+</article>
