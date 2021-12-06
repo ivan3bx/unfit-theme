@@ -5,7 +5,10 @@
 	{{ if .Site.Params.Favicon -}}
 	<link href="{{ .Site.Params.Favicon }}" rel="alternate icon" type="image/png" />
 	{{- end -}}
-	{{ if .Site.Params.PlausibleDomain }}
+	{{ range .AlternativeOutputFormats }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+	{{ end -}}
+	{{ if .Site.Params.PlausibleDomain -}}
 	<script defer data-domain="{{ .Site.Params.PlausibleDomain }}" src="https://plausible.io/js/plausible.js"></script>
 	{{- end -}}
 	{{ $title := print .Site.Title " | " .Title -}}
