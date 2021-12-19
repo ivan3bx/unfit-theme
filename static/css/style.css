@@ -151,10 +151,10 @@ article {
 }
 
 blockquote {
-	margin-left: 0rem;
-	margin-right: 2rem;
+	margin-left: 0;
+	margin-right: 0;
 	line-height: 1.59rem;
-	border-left: 4px solid #e2e2e2;
+	border-left: 4px solid #d2d2d2;
 	padding-left: 1rem;
 }
 
@@ -264,10 +264,6 @@ header .subtitle {
 	header a:hover {
 		border: none;
 		text-decoration: none;
-	}
-
-	blockquote {
-		margin-right: 2.9rem;
 	}
 
 	header {
